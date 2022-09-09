@@ -6,9 +6,38 @@
 \author{Valentin Zwerschke}
 \date{September, 2022}
 
-
 \begin{docuent}
 \maketitle
-\section*{Aufgabe 1}
+\section*{Aufgabe 2}
+\subsection*{Teilaufgabe a)}
+Es gelten fuer die Radien der primaer und sekundaer Geschwindigkeiten die Formeln: 
+$s_{primaer} = 5,5 km/s \cdot t_1 ; s_{sekundaer} = 3,3 km/s \cdot t_2$.\\
+Stellt man diese Formeln mithilfe des Gleichsetzungsverfahrens um bekommt man dann die Formel: \space \space $0 = 5,5 km/s \cdot t_1 - 3,3 km\h \cdot t_2$.\\Vereinfacht geschrieben: $0 = 2,2 km/s \cdot t_1  + 3,3 km/s \cdot \Delta t$
+Loest man hier also nach $t_1$ auf bekommt man die Gleichung: $t_1 = - \frac{3,3}{2,2} \cdot \Delta t$.\\
+Die zwei wichtigen Formeln die wir hieraus bekommen sind: 
+\begin{itemize}
+	\item $t_1 = \frac{v_s \cdot \Delta t}{v_p - v_s}$
+	\item $r = v_p \cdot t_1 = \frac{v_s}{v_p - v_s} \cdot v_p \cdot \Delta t$
+\end{itemize}
+Um also das Epizentrum herauszubekommen muss man mithilfe eines Zirkels jeweils einen Kreis mit dem Radius zeichnen und dann sieht man das Epizentrum an dem Schnittpunkt der vier Kreise.\\
+Dazu benoetigen wir zunaechst die jeweiligen $\Delta t$ der Stationen. Dazu muessen wir nur die Differenz zwischen der P- und S-Wellen berechnen.
+\begin{itemize}
+	\item MIYKNA: $\Delta t \approx 22,85s$ 
+	\item ROKUGO: $\Delta t \approx 29,35s$ 
+	\item N.KKWH: $\Delta t \approx 17,2s$ 
+	\item N.KAKH: $\Delta t \approx 17,3s$ 
+\end{itemize}
+Als naechstes die jeweiligen Radien ausrechnen: 
+\begin{itemize}
+	\item $r_M = \frac{3,3km/s}{5,5 km/s - 3,3 km/s} \cdot 5,5 km/s \cdot 22,85 s = 188,51 km$
+	\item $r_R = 242,1375km$
+	\item $r_{N.KK} = 141,9km$
+	\item $r_{N.KA} = 142,725km$
+\end{itemize}
+Nun haben wir alle Radien und muessen sie in die Karte einzeichnen. Bei meiner Zeichnung (siehe M1.A1) schneiden sich die Kreise bei 38,9° Nord, 142,9° Ost.\\
+Um den Zeitpunkt des Erdbebens herauszufinden, muss man einfach den Mittelwert der Formel fuer $t_0$ nehmen. Diese lautet wiefolgt: $t_0 = t_p - \frac{r}{v_p}$\\Mit $t_p$ ist der Ankunft der Primaer Welle an der Station gemeint.
+\subsection*{Teilaufgabe b)}
+Um das Formel Verhaeltnis herauszufinden sollte man alles mit $E_6$ ausdruecken um somit auf das Ergebnis zukommen.\\
+$E_{alle} = 1 \cdot E_8 + 9 \cdot E_7 + 90 \cdot E_6$
 \end{document}
 
