@@ -17,18 +17,25 @@ Das Epizentrum sollte im Schnittpunkt der jeweiligen Kreise um die Messstellen l
 Zunächst berechne ich den Zusammenhang zwischen Radius und Ankuftszeitpunkten. 
 Es gelten für die Radien der Primär- und Sekundärwellen die Formeln: 
 \begin{center}
-$r_{primär} = v_p \cdot t_1= 5,5 km/s \cdot t_1 ; r_{sekundär} = v_s\cdot t_2 = 3,3 km/s \cdot t_2$.
+$r_{primär} = v_p \cdot t_1= 5,5 km/s \cdot t_1 \\ 
+r_{sekundär} = v_s\cdot t_2 = 3,3 km/s \cdot t_2$.
 \end{center}
 Hier bei ist $t_1$ die Laufzeit der Primärwelle und $t_2$ die Laufzeit der Sekundärwelle.\\
-Die beiden Radien sollten gleich groß sein. Mit Hilfe des Gleichsetzungsverfahrens bekommt man die Gleichung: \space \space $0 = 5,5 km/s \cdot t_1 - 3,3 km\h \cdot t_2$.\\Vereinfacht geschrieben: $0 = 2,2 km/s \cdot t_1  + 3,3 km/s \cdot \Delta t$
-Löst man nach $t_1$ auf, so bekommt man die Gleichung: $t_1 = - \frac{3,3}{2,2} \cdot \Delta t$.\\
-Hier die zwei wichtigen Formeln, die wir analog allgemein ableiten können: 
+Die beiden Radien sollten gleich groß sein. Mit Hilfe des Gleichsetzungsverfahrens bekommt man die Gleichung: 
+\space \space $v_p \cdot t_1  = v_s \cdot t_2$.\\
+Anders geschrieben: $0 = (v_p-v_s) \cdot t_1  - v_s \cdot \Delta t$, 
+wobei $\Delta t = t_2- t_1$ die Zeitdifferenz zwischen den zwei Signalen ist. 
+Löst man nach $t_1$ auf, so bekommt man die Gleichung:
 \begin{center}
-	\item $t_1 = \frac{v_s }{v_p - v_s}\cdot \Delta t$\\
+	\item $t_1 = \frac{v_s }{v_p - v_s}\cdot \Delta t$
+\end{center}
+Aus dieser ergibt sich die gesuchte Beziehung zwischen Radius und $\Delta t$. 
+\begin{center}
 	\item $r = v_p \cdot t_1 = \frac{v_s}{v_p - v_s} \cdot v_p \cdot \Delta t$
 \end{center}
-Um das Epizentrum herauszubekommen, muss man mit Hilfe eines Zirkels jeweils einen Kreis mit dem jewwiligen Radius um die Messtelle zeichnen. Dann sieht man das Epizentrum an dem Schnittpunkt der vier Kreise.\\
-Dazu benötigen wir zunächst die jeweiligen $\Delta t$ der Stationen. Dazu müssen wir nur die Differenz zwischen der P- und S-Wellen berechnen.
+Um das Epizentrum herauszubekommen, muss man mit Hilfe eines Zirkels jeweils einen Kreis mit dem entsprechenden Radius um die Messstelle zeichnen. 
+Dann sieht man das Epizentrum an dem Schnittpunkt der vier Kreise.\\
+Wir benötigen die jeweiligen $\Delta t$ der Stationen. Dazu müssen wir die Differenz zwischen der P- und S-Wellensignalen berechnen.
 \begin{itemize}
 	\item MIYKNA: $\Delta t \approx 22,85s$ 
 	\item ROKUGO: $\Delta t \approx 29,35s$ 
