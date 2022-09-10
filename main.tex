@@ -11,14 +11,14 @@
 \section*{Aufgabe 2}
 \subsection*{Teilaufgabe a)}
 \subsubsection*{1. Epizentrum lokalisieren}
-Die Wellen, primär und sekundär, breiten sich kreisförmig vom Epizentrum aus aus. Andersherum betrachtet, kann das Signal an einem der Messstellen von jedem Punkt auf einem Kreis mit dem Radius $r$ liegen, 
+Die Wellen, primär und sekundär, breiten sich kreisförmig vom Epizentrum her aus. Andersherum betrachtet, kann das Signal an einem der Messstellen von jedem Punkt auf einem Kreis mit dem Radius $r$ liegen, 
 der sich aus den Messzeiten der Ankunft Primär- und Sekundärwelle berechnen läßt. 
 Das Epizentrum sollte im Schnittpunkt der jeweiligen Kreise um die Messstellen liegen. 
 Zunächst berechne ich den Zusammenhang zwischen Radius und Ankuftszeitpunkten. 
 Es gelten für die Radien der Primär- und Sekundärwellen die Formeln: 
 \begin{center}
-$r_{primär} = v_p \cdot t_1= 5,5 km/s \cdot t_1 \\ 
-r_{sekundär} = v_s\cdot t_2 = 3,3 km/s \cdot t_2$.
+	$r_{p} = v_p \cdot t_1 = 5,5 km/s \cdot t_1$ \\ 
+	$r_{s} = v_s \cdot t_2 = 3,3 km/s \cdot t_2$.
 \end{center}
 Hier bei ist $t_1$ die Laufzeit der Primärwelle und $t_2$ die Laufzeit der Sekundärwelle.\\
 Die beiden Radien sollten gleich groß sein. Mit Hilfe des Gleichsetzungsverfahrens bekommt man die Gleichung: 
@@ -27,14 +27,14 @@ Anders geschrieben: $0 = (v_p-v_s) \cdot t_1  - v_s \cdot \Delta t$,
 wobei $\Delta t = t_2- t_1$ die Zeitdifferenz zwischen den zwei Signalen ist. 
 Löst man nach $t_1$ auf, so bekommt man die Gleichung:
 \begin{center}
-	\item $t_1 = \frac{v_s }{v_p - v_s}\cdot \Delta t$
+	\item $t_1 = \frac{v_s }{v_p - v_s}\cdot \Delta t$ 
 \end{center}
 Aus dieser ergibt sich die gesuchte Beziehung zwischen Radius und $\Delta t$. 
 \begin{center}
 	\item $r = v_p \cdot t_1 = \frac{v_s}{v_p - v_s} \cdot v_p \cdot \Delta t$
 \end{center}
 Um das Epizentrum herauszubekommen, muss man mit Hilfe eines Zirkels jeweils einen Kreis mit dem entsprechenden Radius um die Messstelle zeichnen. 
-Dann sieht man das Epizentrum an dem Schnittpunkt der vier Kreise.\\
+Dann sieht man das Epizentrum an dem Schnittpunkt der vier Kreise (vgl. M1 A1). 
 Wir benötigen die jeweiligen $\Delta t$ der Stationen. Dazu müssen wir die Differenz zwischen der P- und S-Wellensignalen berechnen.
 \begin{itemize}
 	\item MIYKNA: $\Delta t \approx 22,85s$ 
@@ -42,17 +42,17 @@ Wir benötigen die jeweiligen $\Delta t$ der Stationen. Dazu müssen wir die Dif
 	\item N.KKWH: $\Delta t \approx 17,2s$ 
 	\item N.KAKH: $\Delta t \approx 17,3s$ 
 \end{itemize}
-\newpage
-Als nächstes die jeweiligen Radien ausrechnen: 
+Als nächstes berechnen wir die jeweiligen Radien: 
 \begin{itemize}
-	\item $r_M = \frac{3,3km/s}{5,5 km/s - 3,3 km/s} \cdot 5,5 km/s \cdot 22,85 s = 188,51 km$
-	\item $r_R = 242,1375km$
+	\item $r_M = \frac{3,3km/s}{5,5 km/s - 3,3 km/s} \cdot 5,5 km/s \cdot 22,85 s = 188,5 km$
+	\item $r_R = 242,1km$
 	\item $r_{N.KK} = 141,9km$
-	\item $r_{N.KA} = 142,725km$
+	\item $r_{N.KA} = 142,7km$
 \end{itemize}
-Nun haben wir alle Radien und muessen sie in die Karte einzeichnen. Bei meiner Zeichnung (siehe M1.A1) schneiden sich die Kreise bei 38,9° Nord, 142,9° Ost.
+Nun haben wir alle Radien und tragen die Kreise in die Karte um die Messstationen ein. 
+Bei meiner Zeichnung (siehe Abb. M1.A1) schneiden sich die Kreise bei 38,9° Nord, 142,9° Ost. Dort sollte das Epizentrum liegen. 
 \subsubsection*{2. Zeitpunkt berechnen}
-Um den Zeitpunkt des Erdbebens herauszufinden, muss man einfach den Mittelwert der Formel fuer $t_0$ an den jeweiligen Stationen nehmen. Diese lautet wiefolgt: $t_0 = t_p - \frac{r}{v_p}$\\Mit $t_p$ ist der Ankunftszeitpunkt der Primaerwelle an der jeweiligen Station gemeint.\\\\
+Um den Zeitpunkt des Erdbebens herauszufinden, berechne ich den Mittelwert der Formel für $t_0$ an den jeweiligen Stationen nehmen. Diese lautet wiefolgt: $t_0 = t_p - \frac{r}{v_p}$\\Mit $t_p$ ist der Ankunftszeitpunkt der Primaerwelle an der jeweiligen Station gemeint.\\\\
 \begin{tabular}{l|l|l|l|l|l|l|l}
 		   & $t_{p}$         & $t_s$         & $\Delta t$ & $r$      & $\frac{r}{v_p}$    & $\frac{r}{v_s}$    & $t_0$          \\\hline
 	MIYKNA & 14:46:46,71 & 14:47:9,56  & 22,85   & 188,51 & 34,28 & 57,13 & 14:46:12,44 \\
