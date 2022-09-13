@@ -10,6 +10,54 @@
 
 \begin{document}
 \maketitle
+\section*{Aufgabe 1}
+\subsection*{Teilaufgabe a) - Brennweite der Linse}
+Zur Bestimmung der Brennweite verwende ich die Linsengleichung
+\begin{center}
+	$\frac{1}{f}=\frac{1}{g}+\frac{1}{b}$
+\end{center}
+beziehungsweise nach f aufgelöst
+\begin{center}
+	$f=\frac{gb}{g+b}=\frac{140cm\cdot16,8cm}{16,8cm+140cm}=15cm$
+\end{center}
+\subsection*{Teilaufgabe b) - Planparallele Platte zw. Linse und Schirm}
+Bein Durchgang eines Lichtstrahls durch eine planparallele Platte wir der Strahl beim Eintritt in das optisch dichtere
+Medium zur optischen Achse hin gebrochen und beim Austritt wieder weg von der optischen Achse. Dies geschieht im gleichen Winkel, 
+sodass der Strahl parallel zum Eingangsstrahl verschoben herauskommt.   
+Um qualtitantiv zu ermitteln, was beim Einsetzen der planparellelen Platte passiert, habe ich die Veränderungen der drei Strahlen (Mittelpunktstrahl, Brennpunktstrahl und Pararllelstrahl) betrachtet.
+Der Brennpunktstrahl komnmt nach der Linse partallel zur optischen Achse heraus und geht ungebrochen durch die Platte. Die beiden anderen Strahlen werden parallel verschoben und zwar weiter je größer der Einfallswinkel ist. 
+Die verschobenen Strahlen (in rot) schneiden sich hinter der aktuellen Bildebene. Der Schirm muss also nach hinten geschoben werden.
+\begin{center}
+	\includegraphics[scale=0.45]{Linse.JPG}
+\end{center}
+
+\subsection*{Teilaufgabe c) - Notwendige Verschiebung des Schirms}
+Aus dem Brechungsgesetz 
+\begin{center}
+	$\frac{\sin\alpha}{\sin\beta}=\frac{n_2}{n_1}$
+\end{center}
+wobei $n_1$ und $n_2$ die Brechungsindizes der beiden Medien sind, $\alpha$ der Einfallwinkel gemessen zur 
+optischen Achse und $\beta$ der Austrittswinkel nach dem Übergang ist, 
+kann man die Parallelverschiebung der Eingangs- und Ausgangsstrahls beim Durchgang durch die Planparallelel Platte mit einfachen geometrischen Beziehungen berechnen. 
+Aus der Literatur findet man die Beziehung
+\begin{center}
+	$s=d\cdot \sin\alpha \left( 1-\frac{\cos\alpha}{\sqrt{n^2-\sin^2\alpha}}\right)$
+\end{center}
+Der einfachheit halber haben wir für die Luft $n=1$ angenommen und den Brechungsindex der 
+Platte mit $n$ bezeichnet. Die Dicke der Platte ist $d$ und $\alpha$ der Einfallswinkel eines Strahls. 
+Um die notwenmdige Verschiebung zu berechnen, 
+betrachte ich das folgende Dreieck
+\begin{center}
+	\includegraphics[scale=0.6]{Linse2.JPG}
+\end{center}
+Es gilt $sin\alpha=s/(b'-b)$ bzw. umgestellt nach der gesuchten Größe $b'-b$
+\begin{center}
+	$b'-b = \frac{s}{sin\alpha} = d\cdot \sin\alpha \left( 1-\frac{\cos\alpha}{\sqrt{n^2-\sin^2\alpha}}\right) / \sin\alpha $ \\
+	$= d \cdot  \left( 1-\frac{\cos\alpha}{\sqrt{n^2-\sin^2\alpha}}\right) \approx d\cdot (1-1/n)$
+\end{center}
+wobei die letzte Näherung füpr kleine Winkel $alpha$ gilt, wovon wir ja ausgehen durften.
+Setzt man nun die Werte für $d$ und $n$ aus der Aufgabenstellung ein, so erhält man einen Wert von 1cm für die notwendige Verschiebung. 
+
 \section*{Aufgabe 2}
 \subsection*{Teilaufgabe a)}
 \subsubsection*{1. Epizentrum lokalisieren}
@@ -86,7 +134,7 @@ $\frac{E_9}{E_{alle}} = \frac{E_6 \cdot 10^{\frac{3}{2} (9 - 6)}}{E_6 \cdot 10^{
 \end{center}
 Das Beben war hatte somit eine ca. 23-fach hähere Energie. 
 \section*{Aufgabe 3}
-\subsection*{Teilaufgabe a) Schwerpunktbahn}
+\subsection*{Teilaufgaben a,b) Schwerpunktbahn und Drehfrequenz}
 Die Bewegung des beiden Punkte kann man sich als Überlagerungen der Schwerpunktbewegung mit jeweils einer Kreisbewegung vorstellen, wobei die Schwerpunktbewegung in x-Richtung eine gleichförmige ist mit 
 Anfangsposition 0 und in y-Richtung eine Überlagerung aus freiem Fall und gleichförmiger Bewegung mit Anfangsposition $y_0$.
 \begin{center}
@@ -99,14 +147,48 @@ Die Überlagerten Kreisbewebungen sind
 	$y_p (t) = p \cdot (\cos(\omega t))$ ; $y_q (t)= q \cdot (-\cos(\omega t)) $
 \end{center} 
 wobei $\omega = 2\pi f $ die Kreisfrequenz der Kreisbewegung mit der gesuchten Frequenz $f$ ist.\\
-Zunächst rechne ich die Bewegung durch den freien Fall heraus.  
+Zunächst rechne ich die Bewegung durch den freien Fall heraus, 
+indem ich bei jedem $y$-Wert $0,5gt^2$ abziehe. Dadurch erhalte ich die folgenden Bahnkurven.
 \begin{center}
-	\includegraphics[scale=0.6]{Kurve-P-Punkt-ohne-freien-Fall.png}
-	\includegraphics[scale=0.6]{Kurve-Q-Punkt-ohne-freien-Fall.png}
+	\includegraphics[scale=0.38]{Kurve-P-Punkt-ohne-freien-Fall.png}
+	\includegraphics[scale=0.42]{Kurve-Q-Punkt-ohne-freien-Fall.png}
 \end{center}
+Um die Bewegung des Schwerpunktes herauszubekommen, zeichne ich die $x$-Koordinaten der Punkte P und Q Punkte sowie die $y$-Koordinaten der Punkte P und Q über der Zeit auf. 
+\begin{center}
+	\includegraphics[scale=0.47]{x_s-ueber-Zeit.JPG}
+	\includegraphics[scale=0.45]{y_s-ueber-Zeit.JPG}
+\end{center}
+Durch die Drehung des Schlägers streuen die Punkte jeweils um den Schwerpunkt. Ausgleichsgeraden durch die Punkte geben mir also die $x$-Bewegung und die $y$-Bewegung des Schwerpunktes.
+Ich lese ab:
+\begin{center}
+	$x_s=4,72$m/s$\cdot t -0,01$m bzw. $ v_{xs} = 4,72$ m/s \\
+	$y_s=6,71$m/s$\cdot t -0,95$m bzw. $ v_{ys} = 6,71$ m/s \\
+\end{center}
+Da nun die Abwurfgeschwindigkeiten bekannt sind, kann ich genauso wie ich den freien Fall abgezogen habe, nun auch den Anteil der Geradlinigen Schwerpunkbewegung sowie die Position des Schwerpunktes zum Anfang.
+Ich erhalte wunderschöne Kreisbahnen, aus denen ich die gefragten Größen $p$ und $q$ ablesen kann. 
+\begin{center}
+	\includegraphics[scale=0.6]{Kreis-P.JPG}
+	\includegraphics[scale=0.6]{Kreis-Q.JPG}
+\end{center}
+Ich finde für die Abstände der Punkte P und Q aus den Radien der Kreise die Werte 
+\begin{center}
+	$p=0,35$m und $q=0,25$m
+\end{center}
+Nun muss ich noch die Frequenz bestimmen. Dazu trage ich die Koordinaten der Punkte P und Q ohne die Schwerpunktbewegung gegen die Zeit auf 
+und erhalte die erwarteten Sinusförmigen Kurven.   
+\begin{center}
+	\includegraphics[scale=0.5]{Sinus-P.JPG}
+	\includegraphics[scale=0.5]{Sinus-Q.JPG}
+\end{center}
+Aus diesen Kurven kann ich nun aus den Nullduchgängen die Periodendauer und somit die 
+Frequenz $f=1/T$ der Drehbewegung bestimnmen. Ich lese für jeweils 3 Periden die Zeit ab und erhalte als Mittelwert $3\cdot T=1,1$s.
+Damit ergibt sich eine Frequenz von $2,7$Hz. 
 
-
-
+Bleibt, auch wenn zu Beginn gefragt, am Ende die Schwerunktbahn, die sich aus den Werten für $v_{xs}$ und $v_{ys}$, den Anfangswerten und dem Beitrag des freien Falls berechnen lassen.
+Mein Excel gint mit die folgende Parabel-Kurve
+\begin{center}
+	\includegraphics[scale=0.8]{Schwerpunktbahn.JPG}
+\end{center}
 
 
 \section*{Aufgabe 4}
