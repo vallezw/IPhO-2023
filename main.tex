@@ -2,42 +2,112 @@
 \documentclass{article}
 \usepackage[titletoc,title]{appendix}
 \usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 \title{Internationale Physik Olympiade 2022}
 \author{Valentin Zwerschke}
 \date{September, 2022}
 
 \begin{document}
 \maketitle
+\section*{Aufgabe 1}
+\subsection*{Teilaufgabe a) - Brennweite der Linse}
+Zur Bestimmung der Brennweite verwende ich die Linsengleichung
+\begin{center}
+	$\frac{1}{f}=\frac{1}{g}+\frac{1}{b}$
+\end{center}
+beziehungsweise nach f aufgelöst
+\begin{center}
+	$f=\frac{gb}{g+b}=\frac{140cm\cdot16,8cm}{16,8cm+140cm}=15cm$
+\end{center}
+\subsection*{Teilaufgabe b) - Planparallele Platte zw. Linse und Schirm}
+Bein Durchgang eines Lichtstrahls durch eine planparallele Platte wir der Strahl beim Eintritt in das optisch dichtere
+Medium zur optischen Achse hin gebrochen und beim Austritt wieder weg von der optischen Achse. Dies geschieht im gleichen Winkel, 
+sodass der Strahl parallel zum Eingangsstrahl verschoben herauskommt.   
+Um qualtitantiv zu ermitteln, was beim Einsetzen der planparellelen Platte passiert, habe ich die Veränderungen der drei Strahlen (Mittelpunktstrahl, Brennpunktstrahl und Pararllelstrahl) betrachtet.
+Der Brennpunktstrahl komnmt nach der Linse partallel zur optischen Achse heraus und geht ungebrochen durch die Platte. Die beiden anderen Strahlen werden parallel verschoben und zwar weiter je größer der Einfallswinkel ist. 
+Die verschobenen Strahlen (in rot) schneiden sich hinter der aktuellen Bildebene. Der Schirm muss also nach hinten geschoben werden.
+\begin{center}
+	\includegraphics[scale=0.45]{Linse.JPG}
+\end{center}
+
+\subsection*{Teilaufgabe c) - Notwendige Verschiebung des Schirms}
+Aus dem Brechungsgesetz 
+\begin{center}
+	$\frac{\sin\alpha}{\sin\beta}=\frac{n_2}{n_1}$
+\end{center}
+wobei $n_1$ und $n_2$ die Brechungsindizes der beiden Medien sind, $\alpha$ der Einfallwinkel gemessen zur 
+optischen Achse und $\beta$ der Austrittswinkel nach dem Übergang ist, 
+kann man die Parallelverschiebung der Eingangs- und Ausgangsstrahls beim Durchgang durch die Planparallelel Platte mit einfachen geometrischen Beziehungen berechnen. 
+Aus der Literatur findet man die Beziehung
+\begin{center}
+	$s=d\cdot \sin\alpha \left( 1-\frac{\cos\alpha}{\sqrt{n^2-\sin^2\alpha}}\right)$
+\end{center}
+Der einfachheit halber haben wir für die Luft $n=1$ angenommen und den Brechungsindex der 
+Platte mit $n$ bezeichnet. Die Dicke der Platte ist $d$ und $\alpha$ der Einfallswinkel eines Strahls. 
+Um die notwenmdige Verschiebung zu berechnen, 
+betrachte ich das folgende Dreieck
+\begin{center}
+	\includegraphics[scale=0.6]{Linse2.JPG}
+\end{center}
+Es gilt $sin\alpha=s/(b'-b)$ bzw. umgestellt nach der gesuchten Größe $b'-b$
+\begin{center}
+	$b'-b = \frac{s}{sin\alpha} = d\cdot \sin\alpha \left( 1-\frac{\cos\alpha}{\sqrt{n^2-\sin^2\alpha}}\right) / \sin\alpha $ \\
+	$= d \cdot  \left( 1-\frac{\cos\alpha}{\sqrt{n^2-\sin^2\alpha}}\right) \approx d\cdot (1-1/n)$
+\end{center}
+wobei die letzte Näherung füpr kleine Winkel $alpha$ gilt, wovon wir ja ausgehen durften.
+Setzt man nun die Werte für $d$ und $n$ aus der Aufgabenstellung ein, so erhält man einen Wert von 1cm für die notwendige Verschiebung. 
+
 \section*{Aufgabe 2}
 \subsection*{Teilaufgabe a)}
 \subsubsection*{1. Epizentrum lokalisieren}
-Es gelten fuer die Radien der primaer und sekundaer Geschwindigkeiten die Formeln: 
-$s_{primaer} = 5,5 km/s \cdot t_1 ; s_{sekundaer} = 3,3 km/s \cdot t_2$.\\
-Stellt man diese Formeln mithilfe des Gleichsetzungsverfahrens um bekommt man dann die Formel: \space \space $0 = 5,5 km/s \cdot t_1 - 3,3 km/h \cdot t_2$.\\Vereinfacht geschrieben: $0 = 2,2 km/s \cdot t_1  + 3,3 km/s \cdot \Delta t$
-Loest man hier also nach $t_1$ auf bekommt man die Gleichung: $t_1 = - \frac{3,3}{2,2} \cdot \Delta t$.\\
-Die zwei wichtigen Formeln die wir hieraus bekommen sind: 
-\begin{itemize}
-	\item $t_1 = \frac{v_s \cdot \Delta t}{v_p - v_s}$
+Die Wellen, primär und sekundär, breiten sich kreisförmig vom Epizentrum her aus. Andersherum betrachtet, kann das Signal an einem der Messstellen von jedem Punkt auf einem Kreis mit dem Radius $r$ liegen, 
+der sich aus den Messzeiten der Ankunft Primär- und Sekundärwelle berechnen läßt. 
+Das Epizentrum sollte im Schnittpunkt der jeweiligen Kreise um die Messstellen liegen. 
+Zunächst berechne ich den Zusammenhang zwischen Radius und Ankuftszeitpunkten. 
+Es gelten für die Radien der Primär- und Sekundärwellen die Formeln: 
+\begin{center}
+	$r_{p} = v_p \cdot t_1 = 5,5 km/s \cdot t_1$ \\ 
+	$r_{s} = v_s \cdot t_2 = 3,3 km/s \cdot t_2$.
+\end{center}
+Hier bei ist $t_1$ die Laufzeit der Primärwelle und $t_2$ die Laufzeit der Sekundärwelle.\\
+Die beiden Radien sollten gleich groß sein. Mit Hilfe des Gleichsetzungsverfahrens bekommt man die Gleichung: 
+\space \space $v_p \cdot t_1  = v_s \cdot t_2$.\\
+Anders geschrieben: $0 = (v_p-v_s) \cdot t_1  - v_s \cdot \Delta t$, 
+wobei $\Delta t = t_2- t_1$ die Zeitdifferenz zwischen den zwei Signalen ist. 
+Löst man nach $t_1$ auf, so bekommt man die Gleichung:
+\begin{center}
+	\item $t_1 = \frac{v_s }{v_p - v_s}\cdot \Delta t$ 
+\end{center}
+Aus dieser ergibt sich die gesuchte Beziehung zwischen Radius und $\Delta t$. 
+\begin{center}
 	\item $r = v_p \cdot t_1 = \frac{v_s}{v_p - v_s} \cdot v_p \cdot \Delta t$
-\end{itemize}
-Um also das Epizentrum herauszubekommen muss man mithilfe eines Zirkels jeweils einen Kreis mit dem Radius zeichnen und dann sieht man das Epizentrum an dem Schnittpunkt der vier Kreise.\\
-Dazu benoetigen wir zunaechst die jeweiligen $\Delta t$ der Stationen. Dazu muessen wir nur die Differenz zwischen der P- und S-Wellen berechnen.
+\end{center}
+Um das Epizentrum herauszubekommen, muss man mit Hilfe eines Zirkels jeweils einen Kreis mit dem entsprechenden Radius um die Messstelle zeichnen. 
+Dann sieht man das Epizentrum an dem Schnittpunkt der vier Kreise (vgl. M1 A1). 
+Wir benötigen die jeweiligen $\Delta t$ der Stationen. Dazu müssen wir die Differenz zwischen der P- und S-Wellensignalen berechnen.
 \begin{itemize}
 	\item MIYKNA: $\Delta t \approx 22,85s$ 
 	\item ROKUGO: $\Delta t \approx 29,35s$ 
 	\item N.KKWH: $\Delta t \approx 17,2s$ 
 	\item N.KAKH: $\Delta t \approx 17,3s$ 
 \end{itemize}
-Als naechstes die jeweiligen Radien ausrechnen: 
+Als nächstes berechnen wir die jeweiligen Radien: 
 \begin{itemize}
-	\item $r_M = \frac{3,3km/s}{5,5 km/s - 3,3 km/s} \cdot 5,5 km/s \cdot 22,85 s = 188,51 km$
-	\item $r_R = 242,1375km$
+	\item $r_M = \frac{3,3km/s}{5,5 km/s - 3,3 km/s} \cdot 5,5 km/s \cdot 22,85 s = 188,5 km$
+	\item $r_R = 242,1km$
 	\item $r_{N.KK} = 141,9km$
-	\item $r_{N.KA} = 142,725km$
+	\item $r_{N.KA} = 142,7km$
 \end{itemize}
-Nun haben wir alle Radien und muessen sie in die Karte einzeichnen. Bei meiner Zeichnung (siehe M1.A1) schneiden sich die Kreise bei 38,9° Nord, 142,9° Ost.
-\subsubsection*{2. Zeitpunkt errechnen}
-Um den Zeitpunkt des Erdbebens herauszufinden, muss man einfach den Mittelwert der Formel fuer $t_0$ an den jeweiligen Stationen nehmen. Diese lautet wiefolgt: $t_0 = t_p - \frac{r}{v_p}$\\Mit $t_p$ ist der Ankunftszeitpunkt der Primaerwelle an der jeweiligen Station gemeint.\\\\
+Nun haben wir alle Radien und tragen die Kreise in die Karte um die Messstationen ein. 
+Bei meiner Zeichnung (siehe Abb. M1.A1) schneiden sich die Kreise bei 38,9° Nord, 142,9° Ost. Dort sollte das Epizentrum liegen. 
+\subsubsection*{2. Zeitpunkt berechnen}
+Für die Berechnung des Zeitpunktes des Erdbebens verwende ich die Formel 
+$t_0 = t_p - \frac{r}{v_p}$, 
+wobei $t_p$ der Zeitpunkt des Eintreffens des Primärwellensignals ist. 
+Ich berechne den Zeitpunkt aus den Werten $t_0$ aller vier Stationen und berechne den Mittelwert. 
+In der folgenden Tabelle habe ich die Ergebnisse zusammengetragen.
+\begin{center}
 \begin{tabular}{l|l|l|l|l|l|l|l}
 		   & $t_{p}$         & $t_s$         & $\Delta t$ & $r$      & $\frac{r}{v_p}$    & $\frac{r}{v_s}$    & $t_0$          \\\hline
 	MIYKNA & 14:46:46,71 & 14:47:9,56  & 22,85   & 188,51 & 34,28 & 57,13 & 14:46:12,44 \\
@@ -45,17 +115,90 @@ Um den Zeitpunkt des Erdbebens herauszufinden, muss man einfach den Mittelwert d
 	N.KKWH & 14:46:40,13 & 14:46:57,33 & 17,2    & 141,90 & 25,80 & 43,00 & 14:46:14,33 \\
 	N.KAKH & 14:46:40,57 & 14:46:57,87 & 17,3    & 142,73 & 25,95 & 43,25 & 14:46:14,62 
 \end{tabular}
-\\\\Rechnet man jetzt den Mittelwert von den 4 $t_0$ Werten aus, kann man davon ausgehen, dass das Erdbeben um \textbf{14:46:12,89} stattfindet.
+\end{center}
+Rechnet man jetzt den Mittelwert von den 4 $t_0$ Werten aus, kann man davon ausgehen, 
+dass das Erdbeben um \textbf{14:46:12,89} stattgefunden hat.
+
+
 \subsection*{Teilaufgabe b)}
-Um das Formel Verhaeltnis herauszufinden sollte man alles mit dem $E_6$ Verhaeltnis ausdruecken um es somit zu kuerzen und das Ergebnis herauszufinden.\\
-$E_{alle} = 1 \cdot E_8 + 9 \cdot E_7 + 90 \cdot E_6$. Nachdem wir nun $E_alle$ haben muss es nur noch $E_9$ teilen, dh.:
-$\frac{E_9}{E_{alle}} = \frac{E_6 \cdot 10^{\frac{3}{2} (9 - 6)}}{E_6 \cdot 10^{\frac{3}{2}(8-6)} + 9 \cdot E_6 \cdot 10^{\frac{3}{2}(7-6)} + 90 \cdot E_6}$.\\Jetzt kann man $E_6$ rauskuerzen.
-$\frac{E_9}{E_{alle}} = \frac{10^\frac{9}{2}}{10^3 + 0 \cdot 10^\frac{3}{2} + 90} \approx 23$
+Um das Verhältnis der Energien herauszufinden, drücke ich alle Energien über das gegebene Energieverhältnis durch $E_6$, der Energie eines Bebens der Stärlke 6, aus. 
+So kann man im Verhältnis der gesuchten Energien $E_6$ kürzen und bekommt die gesuchte Verhältniszahl.\\
+Die Energie aller auftretenden Beben der Stärke 6-8 beschreibt die folgende Summe über die jeweiligen Energien multipliziert mit der Auftretenswahrscheinlichkeit pro Jahr. 
+\begin{center}
+$E_{alle} = 1 \cdot E_8 + 9 \cdot E_7 + 90 \cdot E_6$. 
+\end{center}
+Nachdem wir nun $E_{alle}$ haben, muss ich es nur noch mit $E_9$ (auch durch $E_6$ ausgedrückt) ins Verhältnis setzen, d.h.:
+\begin{center}
+$\frac{E_9}{E_{alle}} = \frac{E_6 \cdot 10^{\frac{3}{2} (9 - 6)}}{E_6 \cdot 10^{\frac{3}{2}(8-6)} + 9 \cdot E_6 \cdot 10^{\frac{3}{2}(7-6)} + 90 \cdot E_6}
+= \frac{10^\frac{9}{2}}{10^3 + 0 \cdot 10^\frac{3}{2} + 90} \approx 23$
+\end{center}
+Das Beben war hatte somit eine ca. 23-fach hähere Energie. 
+\section*{Aufgabe 3}
+\subsection*{Teilaufgaben a,b) Schwerpunktbahn und Drehfrequenz}
+Die Bewegung des beiden Punkte kann man sich als Überlagerungen der Schwerpunktbewegung mit jeweils einer Kreisbewegung vorstellen, wobei die Schwerpunktbewegung in x-Richtung eine gleichförmige ist mit 
+Anfangsposition 0 und in y-Richtung eine Überlagerung aus freiem Fall und gleichförmiger Bewegung mit Anfangsposition $y_0$.
+\begin{center}
+	$x_s (t)= v_{x0}\cdot t$ \\
+	$y_s (t) = v_{y0}\cdot t + y_0 -0.5 g t^2$
+\end{center}   
+Die Überlagerten Kreisbewebungen sind
+\begin{center}
+	$x_p (t) = p \cdot (-\sin(\omega t))$ ; $x_q (t)= q \cdot (\sin(\omega t)) $\\
+	$y_p (t) = p \cdot (\cos(\omega t))$ ; $y_q (t)= q \cdot (-\cos(\omega t)) $
+\end{center} 
+wobei $\omega = 2\pi f $ die Kreisfrequenz der Kreisbewegung mit der gesuchten Frequenz $f$ ist.\\
+Zunächst rechne ich die Bewegung durch den freien Fall heraus, 
+indem ich bei jedem $y$-Wert $0,5gt^2$ abziehe. Dadurch erhalte ich die folgenden Bahnkurven.
+\begin{center}
+	\includegraphics[scale=0.38]{Kurve-P-Punkt-ohne-freien-Fall.png}
+	\includegraphics[scale=0.42]{Kurve-Q-Punkt-ohne-freien-Fall.png}
+\end{center}
+Um die Bewegung des Schwerpunktes herauszubekommen, zeichne ich die $x$-Koordinaten der Punkte P und Q Punkte sowie die $y$-Koordinaten der Punkte P und Q über der Zeit auf. 
+\begin{center}
+	\includegraphics[scale=0.47]{x_s-ueber-Zeit.JPG}
+	\includegraphics[scale=0.45]{y_s-ueber-Zeit.JPG}
+\end{center}
+Durch die Drehung des Schlägers streuen die Punkte jeweils um den Schwerpunkt. Ausgleichsgeraden durch die Punkte geben mir also die $x$-Bewegung und die $y$-Bewegung des Schwerpunktes.
+Ich lese ab:
+\begin{center}
+	$x_s=4,72$m/s$\cdot t -0,01$m bzw. $ v_{xs} = 4,72$ m/s \\
+	$y_s=6,71$m/s$\cdot t -0,95$m bzw. $ v_{ys} = 6,71$ m/s \\
+\end{center}
+Da nun die Abwurfgeschwindigkeiten bekannt sind, kann ich genauso wie ich den freien Fall abgezogen habe, nun auch den Anteil der Geradlinigen Schwerpunkbewegung sowie die Position des Schwerpunktes zum Anfang.
+Ich erhalte wunderschöne Kreisbahnen, aus denen ich die gefragten Größen $p$ und $q$ ablesen kann. 
+\begin{center}
+	\includegraphics[scale=0.6]{Kreis-P.JPG}
+	\includegraphics[scale=0.6]{Kreis-Q.JPG}
+\end{center}
+Ich finde für die Abstände der Punkte P und Q aus den Radien der Kreise die Werte 
+\begin{center}
+	$p=0,35$m und $q=0,25$m
+\end{center}
+Nun muss ich noch die Frequenz bestimmen. Dazu trage ich die Koordinaten der Punkte P und Q ohne die Schwerpunktbewegung gegen die Zeit auf 
+und erhalte die erwarteten Sinusförmigen Kurven.   
+\begin{center}
+	\includegraphics[scale=0.5]{Sinus-P.JPG}
+	\includegraphics[scale=0.5]{Sinus-Q.JPG}
+\end{center}
+Aus diesen Kurven kann ich nun aus den Nullduchgängen die Periodendauer und somit die 
+Frequenz $f=1/T$ der Drehbewegung bestimnmen. Ich lese für jeweils 3 Periden die Zeit ab und erhalte als Mittelwert $3\cdot T=1,1$s.
+Damit ergibt sich eine Frequenz von $2,7$Hz. 
+
+Bleibt, auch wenn zu Beginn gefragt, am Ende die Schwerunktbahn, die sich aus den Werten für $v_{xs}$ und $v_{ys}$, den Anfangswerten und dem Beitrag des freien Falls berechnen lassen.
+Mein Excel gint mit die folgende Parabel-Kurve
+\begin{center}
+	\includegraphics[scale=0.8]{Schwerpunktbahn.JPG}
+\end{center}
+
 
 \section*{Aufgabe 4}
-\subsection*{Teilaufgabe a) - Messwerte}
-\begin{tabular}{llll}
-	Zeit t {[}s{]} & Temp T {[}°C{]}              & \begin{tabular}[c]{@{}l@{}}(T-T\_U)/\\      (T\_0-T\_U)\end{tabular} & -ln(...) \\\hline
+\subsection*{Teilaufgabe a) Experiment - Messwerte}
+Ich habe unsere Teekanne (ca. 1 Liter Fassungsvermögen) mit heißem Wasser aus dem Wasserkocher befüllt und anstelle des Deckekls ein Thermometer aufgesetzt, welches zufälligerweise ideal passte. 
+Das verwendete Heizungsventilthermometer hat einen Metallstab als Fühler, der ungefähr in der Mitte der Tekanne war. 
+Zunächst alle 5 Minuten, später ungefähr alle 10 Minuten habe ich die Temperatur abgelesen. Die Ergebnisse stehen in den ersten zwei Spalten der folgenden Tabelle.\\ 
+\newpage
+\begin{tabular}{cccc}
+	Zeit t {[}s{]} & Temp $\vartheta$ {[}°C{]}              & \begin{tabular}[c]{@{}l@{}}$\frac{\vartheta-\vartheta_u}{\vartheta_o-\vartheta_u}$\end{tabular} & $-\ln{\frac{\vartheta-\vartheta_U}{\vartheta_O-\vartheta_U}}$ \\\hline
 	0              & 56,0 						  & 1,00                                                                 & 0,00     \\
 	5              & 54,3                         & 0,95                                                                 & 0,05     \\
 	10             & 53,0                         & 0,92                                                                 & 0,08     \\
@@ -94,7 +237,10 @@ $\frac{E_9}{E_{alle}} = \frac{10^\frac{9}{2}}{10^3 + 0 \cdot 10^\frac{3}{2} + 90
 	175            & 27,5                         & 0,23                                                                 & 1,47     \\
 	180            & 27,3                         & 0,22                                                                 & 1,49     \\
 	185            & 27,2                         & 0,22                                                                 & 1,51     \\
-	190            & 26,5                         & 0,20                                                                 & 1,60     \\
+	190            & 26,5                         & 0,20                                                                 & 1,60 
+\end{tabular}
+\begin{tabular}{cccc}
+	Zeit t {[}s{]} & Temp $\vartheta$ {[}°C{]}              & \begin{tabular}[c]{@{}l@{}}$\frac{\vartheta-\vartheta_u}{\vartheta_o-\vartheta_u}$\end{tabular} & $-\ln{\frac{\vartheta-\vartheta_U}{\vartheta_O-\vartheta_U}}$ \\\hline
 	200            & 25,9                         & 0,19                                                                 & 1,68     \\
 	218            & 24,5                         & 0,15                                                                 & 1,91     \\
 	228            & 24,1                         & 0,14                                                                 & 1,98     \\
@@ -111,9 +257,50 @@ $\frac{E_9}{E_{alle}} = \frac{10^\frac{9}{2}}{10^3 + 0 \cdot 10^\frac{3}{2} + 90
 	352            & 20,0                         & 0,03                                                                 & 3,61     \\
 	363            & 19,9                         & 0,02                                                                 & 3,72     \\
 	374            & 19,8                         & 0,02                                                                 & 3,83     \\
-	385            & 19,8                         & 0,02                                                                 & 3,83     \\
+	385            & 19,8                         & 0,02                                                                 & 3,83     
 \end{tabular}
+\newpage
+Die Abkühlkurve meines Experiments sieht wie folgt aus. 
+\begin{center}
+	\includegraphics[scale=0.6]{Graph1.png}
+\end{center}
 
-\subsection*{Teilaufgabe b)}
-Zunaechst wollen wir die Formel $\vartheta (t) = \vartheta_u + (\vartheta_0 - \vartheta_U) \cdot e^{-t/r}$
+
+\subsection*{Teilaufgabe b) - Bestimmung Zeitkonstante}
+Zunächst will ich zeigen, dass die gewonnene Abkühlkurve gemäß der Newtonschon Formel 
+\begin{center}
+	$\vartheta (t) = \vartheta_u + (\vartheta_o - \vartheta_u) \cdot e^{-t/\tau}$ 
+\end{center}
+verläuft. Dazu forme ich die Gleichung wie folgt um
+\begin{center}
+	$\frac{\vartheta (t) - \vartheta_u}{\vartheta_o - \vartheta_u} = e^{-t/\tau}$ 
+\end{center}
+Ich nehme den Logarithmus auf beiden Seiten der Gleichung und erhalte eine Geradengleichung, 
+aus deren Steigung sich die Abkühlkonstante $\tau$ berechnen lässt.
+\begin{center}
+	$-\ln{\frac{\vartheta (t) - \vartheta_u}{\vartheta_o - \vartheta_u}} = \frac{1}{\tau}\cdot t$ 
+\end{center}
+Die Ergebnisse des linken Terms habe ich ebenfalls in der obigen Tabelle eingetragen. 
+Wie man in der folgenden Graphik sieht, liegen die Messwerte tatsächlich auf einer Geraden. Somit habe ich gezeigt, dass der Abkühlprozess tatsächlich dem Newtonschon Gesetz folgt.  
+\begin{center}
+	\includegraphics[scale=0.6]{Graph2.png}
+\end{center}
+Die Steigung der Geraden lese ich ab zu $\frac{2,2}{250}\cdot\frac{1}{s}=\frac{0,0088}{s}$.
+Der Kehrwert ist die gesuchte Abkühlkonstante $\tau = 113,6 s$.
+\subsection*{Teilaufgabe c) - Zubereitung Grüner Tee}
+Ich verwende das Newtonsche Abkühlungsgesetz, diesmal mit $\vartheta_o=100^\circ C$.
+\begin{center}
+	$70^\circ C = \vartheta (t) = \vartheta_u + (100^\circ C - \vartheta_u ) \cdot e^{-t/\tau}$ 
+\end{center}
+Es ergibt sich mit dem oben bestimmten Wert für $\tau$ und $\vartheta (t) = 70^\circ C$
+\begin{center}
+	$t=-\tau \ln{\frac{\vartheta (t) - \vartheta_u}{ 100^\circ C - \vartheta_u}} \approx 53 s$
+\end{center}
+Dieses Ergebnis ist wie in der Aufgabe beschrieben eher ungenau, da das Newtonsche Abkühlgesetz nur für kleine Temperaturdifferenzen gilt und 
+die Größe $\tau$ sicherlich auch eine gewisse Abhängigkeit von der Temperatur hat. In der Literatur findet man z.B. eine inverse Abhängigkeit von der Wärmekapazität des Wassers.  
+\\
+Da das Wasser knapp unter dem Siedepunkt stärker verdampft als bei kleinen Temperaturen entzieht die Verdampfungswärme dem Teewasser bei den hohen Temperaturen zusätzliche Energie, 
+was ein schnelleres Erkalten des Teewasseres erwarten lässt. 
+Die Newtonsche Abkühlungskurve beschreibt ja lediglich den Wärmeübergang durch Wärmeleitung ins Gefäß und die umgebende Luft und durch die Abstrahlung. 
+Energieänderung durch Verdampfen ist nicht enthalten.      
 \end{document}
